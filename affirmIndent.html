@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="format-detection" content="email=no"/>
+		<link rel="stylesheet" href="css/reset.css" />
+		<title>affirmIndent</title>
+		<style>
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			html{
+				font-size: 20px;
+			}
+			.wrap{
+				width: 100%;
+				height: 100%;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				background: #efefef;
+				
+			}
+			/*----------head----------*/
+			.head{
+				height: 2.5rem;
+				position: relative;
+				background: #1c1b20;
+				border-bottom: 1px solid #aaaaaa ;
+				color:#fff;
+			}
+			.head b{
+				position:absolute;
+				top:50%;
+				left:1rem;
+				margin-top: -0.275rem;
+				
+			}
+			.head b .back{
+				position: relative;
+				top:-0.2rem;
+				font-size: 0.8rem;
+				left: 0.2rem;
+			}
+			.head_img{
+				
+				width: 0.55rem;
+				height: 0.925rem;
+				
+			}
+			.head h1{
+				text-align: center;
+				font-size: 0.9rem;
+			
+				line-height: 2.5rem;
+			}
+			.head span{
+				position:absolute;
+				right:0.5rem;
+				top:50%;
+				font-size: 0.8rem;
+				margin-top: -0.58rem;
+			}
+			.head_img1{
+				
+				height: 0.325rem;
+				width: 1.175rem;
+				
+			}
+			/*----------main-----------*/
+			.main{
+				-webkit-box-flex:1;
+			}
+			.indent{
+				height: 2.5rem;
+				position: relative;
+				background: #fff;
+				border-bottom: 1px solid #aaaaaa ;
+			
+			}
+			.indent b{
+				position:absolute;
+				top:50%;
+				margin-top: -0.6rem;
+				left:1rem;
+				
+				
+			}
+			.indent b .back{
+				
+				font-size: 0.8rem;
+				left: 0.2rem;
+			}
+			.head_img{
+				
+				width: 0.55rem;
+				height: 0.925rem;
+				
+			}
+			.indent h1{
+				text-align: center;
+				font-size: 0.8rem;
+				line-height: 2.5rem;
+			}
+			.content{
+				background: #fff;
+			}
+			.content dl{
+				display:-webkit-box;
+				padding: 0.6rem 1rem 0.6rem 1rem;
+				position: relative;
+			}
+			.content dl dt{
+				width: 2.5rem;
+				height: 2.375rem;
+				border:1px solid #efefef ;
+				border-radius:0.3rem;
+			}
+			.content dl dd{
+				font-size: 0.65rem;
+				padding-left: 0.5rem;
+			}
+			.content dl dd span{
+				font-size: 0.5rem;
+				color:#bebebe;
+				padding-left: 0.5rem;
+			}
+			.content dt img{
+				width: 100%;
+				height: 100%;
+			}
+			.money {
+				position: absolute;
+				right:1rem;
+				text-align: right;
+			}
+			.money h3{
+				color:#ff5d85;
+			}
+			.lose{
+				text-align: center;
+				height: 1.7rem;
+				background:#fff9e1 ;
+				margin-top: 0.1rem;
+			}
+			.lose a{
+				text-decoration: underline;
+				color:#ca3650;
+				line-height: 1.7rem;
+			}
+			.list{
+				margin-top: 0.5rem;
+				background: #fff;
+			}
+			.list ul li{
+				line-height: 2.4rem;
+				height: 2.4rem;
+				padding-left: 1rem;
+				border-bottom: 1px solid #ccc;
+				position: relative;
+			}
+			.list ul li span{
+				height: 0.8rem;
+				width: 2.5rem;
+				background: #bcbcbc;
+				color:#fff;
+				display: inline-block;
+				position: absolute;
+				left: 4rem;
+				top:0.8rem;
+				font-size: 0.5rem;
+				text-align: center;
+				border-radius:0.3rem;
+				line-height: 0.8rem;
+			}
+			.list ul li b{
+				position: absolute;
+				right: 1rem;
+				top:0.8rem;
+				font-size: 0.5rem;
+				
+			}
+			.list ul li:last-child{
+				font-size: 0.9rem;
+			}
+			.list ul li:last-child b{
+				position: absolute;
+				right: 1rem;
+				top:0.5rem;
+				font-size: 0.9rem;
+				color:#ff2742;
+			}
+			.pay_img{
+				display: -webkit-box;
+				background: #fff;
+			}
+			.pay_img dl{
+				width: 33%;
+				padding: 1.3rem 0;
+				text-align: center;
+			}
+			.pay_img dl dt{
+				width:2.55rem ;
+				height: 2.55rem;
+				display: inline-block;
+			}
+			.pay_img dl dt img{
+				width: 100%;
+				height: 100%;
+			}
+			.footer{
+				height: 2.2rem;
+				
+			}
+			.footer ol{
+				display: -webkit-box;
+				overflow: hidden;
+				
+			}
+			/*----------footer--------------*/
+			.footer ol li{
+				line-height: 2.2rem;
+				padding-left: 1rem;
+			}
+			.footer ol li:nth-child(1){
+				width: 70%;
+				background: #000;
+				color:#fff;
+				
+			}
+			.footer ol li:nth-child(2){
+				width: 30%;
+				color:#fff;
+				background: #ff2742;
+			}
+			.footer ol li span{
+				display: inline-block;
+				border: 0.3rem solid transparent;
+				border-left: 0.3rem solid #fff;
+				margin-left: 0.2rem;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<header class="head">
+				<b><img src="images/2.png" alt="" class="head_img"/><i class="back">返回</i></b>
+				<h1>每日优鲜</h1>
+				<span><img src="images/1.png" alt="" class="head_img1"/></span>
+			</header>
+			
+			<div class="main" id="main-wrap">
+				<div class="main-wrap">
+					<div class="indent">
+						<b><i class="back"><返回</i></b>
+						<h1>订单确认</h1>
+					</div>
+					
+					 <section class="content">
+				 	<dl>
+				 		<dt><img src="images/5.png" alt="" /></dt>
+				 		<dd>墨西哥牛油果<span>2个</span></dd>
+				 		<dd class="money"><h3>￥34.9</h3><h4>x1</h4></dd>
+				 	</dl>
+				 	
+				 </section>
+				 
+				 <section class="lose">
+				 	<a href="">部分商品失效，返回商城重新挑选</a>
+				 </section>
+				 
+				 <section class="list">
+				 	<ul>
+				 		<li>优惠券<span>0张可用</span><b>未使用
+				 		></b></li>
+				 		<li>商品总价<b>+￥125.2</b></li>
+				 		<li>优惠金额<b>-￥0</b></li>
+				 		<li>运费<b>+￥0</b></li>
+				 		<li>合计<b>￥39.9</b></li>
+				 	</ul>
+				 </section>
+				 
+				 <section class="pay_img">
+				 	<dl>
+				 		<dt><img src="images/14.png" alt="" /></dt>
+				 		<dd>余额支付</dd>
+				 	</dl>
+				 	<dl>
+				 		<dt><img src="images/15.png" alt="" /></dt>
+				 		<dd>微信支付</dd>
+				 	</dl>
+				 	<dl>
+				 		<dt><img src="images/13.png" alt="" /></dt>
+				 		<dd>支付宝</dd>
+				 	</dl>
+				 </section>
+				</div>
+			</div>
+			<footer class="footer">
+				<ol>
+					<li>合计￥125.2</li>
+					<li>去支付<span></span></li>
+				</ol>
+			</footer>
+		</div>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/iscroll4.js"></script>
+		<script>
+			var homePage=new iScroll("main-wrap",{
+			onBeforeScrollStart: function (e) { 
+				tagName=e.target.nodeName.toLowerCase();
+				if(tagName!="input" && tagName!="select" && tagName!="textarea" && tagName!="a"){
+						e.preventDefault();
+				}
+			 }
+			});
+		</script>
+	</body>
+</html>
